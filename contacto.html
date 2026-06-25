@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctanos · Panadería El Buen Pancito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="protegerPagina()">
+    <header class="navbar">
+      <div class="logo">🥐 El Buen Pancito</div>
+      <button class="menu-toggle" aria-label="Menú">☰</button>
+      <nav class="nav-links">
+        <a href="inicio.html">Inicio</a>
+        <a href="nosotros.html">Quiénes somos</a>
+        <a href="contacto.html" class="activo">Contáctanos</a>
+        <span id="saludo-usuario"></span>
+        <button class="btn-salir" onclick="cerrarSesion()">Salir</button>
+      </nav>
+    </header>
+
+    <main class="contenido">
+      <h1 class="seccion-titulo">Contáctanos</h1>
+
+      <div class="contacto-grid">
+        <div class="datos-contacto">
+          <h2 style="color: var(--pan-oscuro); margin-bottom: 1rem">
+            Visítanos o escríbenos
+          </h2>
+          <p>
+            <strong>📍 Dirección:</strong> Avenida de America, Madrid, España
+          </p>
+          <p><strong>📞 Teléfono:</strong> +34 614 84 38 07</p>
+          <p><strong>📱 WhatsApp:</strong> +34 614 84 38 07</p>
+          <p><strong>✉️ Correo:</strong> elbuenpancito@gmail.com</p>
+          <p><strong>🕖 Horario:</strong> Lunes a sábado, 6:00 a 20:00</p>
+          <p style="margin-top: 1rem">
+            <strong>Síguenos:</strong><br />
+            Instagram: @elbuenpancito<br />
+            Facebook: @elbuenpancito<br />
+            TikTok: @elbuenpancito
+          </p>
+        </div>
+
+        <form class="formulario" onsubmit="return enviarContacto(event);">
+          <label for="c-nombre">Nombre</label>
+          <input type="text" id="c-nombre" placeholder="Tu nombre" required />
+
+          <label for="c-correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="c-correo"
+            placeholder="tucorreo@ejemplo.com"
+            required
+          />
+
+          <label for="c-mensaje">Mensaje</label>
+          <textarea
+            id="c-mensaje"
+            placeholder="¿En qué podemos ayudarte?"
+            required
+          ></textarea>
+
+          <div id="aviso-contacto" class="aviso"></div>
+
+          <button type="submit" class="btn-principal">Enviar mensaje</button>
+        </form>
+      </div>
+    </main>
+    <div id="created-by">
+      <p>Web by:</p>
+      <ul>
+        <li>Gustavo</li>
+        <li>Julio</li>
+        <li>Eiko</li>
+        <li>Jonathan</li>
+      </ul>
+    </div>
+    <footer>
+      <p>© 2026 Panadería El Buen Pancito · Calle avenida de America, Madrid</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".nav-links");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

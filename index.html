@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión · Panadería El Buen Pancito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-fondo">
+      <div class="login-caja">
+        <div class="logo">🥐</div>
+        <h1>Panadería El Buen Pancito</h1>
+        <p class="subtitulo">Inicia sesión para entrar</p>
+
+        <form onsubmit="return iniciarSesion(event)">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" placeholder="Tu usuario" required />
+
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" placeholder="Tu contraseña" required />
+
+          <div id="aviso-login" class="aviso"></div>
+
+          <button type="submit" class="btn-principal">Entrar</button>
+        </form>
+
+        <div class="pista">
+          <strong>Datos de prueba:</strong><br />
+          Usuario: <code>Campus Caritas</code> &nbsp;·&nbsp; Contraseña: <code>Caritas123</code>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

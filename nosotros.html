@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiénes somos · Panadería El Buen Pancito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="protegerPagina()">
+    <header class="navbar">
+      <div class="logo">🥐 El Buen Pancito</div>
+      <button class="menu-toggle" aria-label="Menú">☰</button>
+      <nav class="nav-links">
+        <a href="inicio.html">Inicio</a>
+        <a href="nosotros.html" class="activo">Quiénes somos</a>
+        <a href="contacto.html">Contáctanos</a>
+        <span id="saludo-usuario"></span>
+        <button class="btn-salir" onclick="cerrarSesion()">Salir</button>
+      </nav>
+    </header>
+
+    <main class="contenido">
+      <h1 class="seccion-titulo">Quiénes somos</h1>
+
+      <div class="bloque">
+        <img
+          src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=600&q=80"
+          alt="Nuestra panadería"
+        />
+        <div class="texto">
+          <h2>Nuestra historia</h2>
+          <p>
+            La Panadería <strong>El Buen Pancito</strong> en 1983 en un pequeño
+            lugar de Madrid, con el comedor del campus y la receta de pan que la
+            abuela Eiko heredó de su familia. Lo que empezó como un negocio
+            familiar hoy es un punto de encuentro para todo el Campus.
+          </p>
+          <p>
+            Tres generaciones después, seguimos amasando cada pieza a mano y
+            horneando antes del amanecer, porque creemos que el pan recién hecho
+            es uno de los pequeños placeres de la vida.
+          </p>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="texto">
+          <h2>Nuestra misión</h2>
+          <p>
+            Llevar a cada hogar productos de panadería frescos, naturales y
+            llenos de sabor, manteniendo viva la tradición artesanal y cuidando
+            cada detalle desde la selección de los ingredientes hasta el
+            horneado.
+          </p>
+          <h2 style="margin-top: 1.2rem">Nuestros valores</h2>
+          <p>
+            🌾 Ingredientes naturales &nbsp;·&nbsp; 👐 Trabajo artesanal
+            &nbsp;·&nbsp; ❤️ Cariño en cada pieza &nbsp;·&nbsp; 🤝 Cercanía con
+            nuestra comunidad
+          </p>
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80"
+          alt="Pan recién horneado"
+        />
+      </div>
+      <h2 class="seccion-titulo">Nuestro equipo</h2>
+      <div class="equipo">
+        <div class="persona">
+          <img
+            src="https://ih1.redbubble.net/image.5007729508.1427/st,small,507x507-pad,600x600,f8f8f8.jpg"
+            alt="María González"
+          />
+          <h3>El Panadero Principal</h3>
+          <p>Maestro panadero y fundador</p>
+        </div>
+        <div class="persona">
+          <img
+            src="https://i.pinimg.com/236x/da/1f/86/da1f8692eca16c9c6d607eaa6352fe65.jpg"
+            alt="Carlos Ramírez"
+          />
+          <h3>Michi</h3>
+          <p>Pastelero jefe</p>
+        </div>
+        <div class="persona">
+          <img
+            src="https://ih1.redbubble.net/image.5331981059.4978/st,small,507x507-pad,600x600,f8f8f8.jpg"
+            alt="julio"
+          />
+          <h3>Julio</h3>
+          <p>Atención al cliente</p>
+        </div>
+      </div>
+      <div class="equipo">
+        <div class="persona">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcz0KaOACzuOiB1wBklxx7WYscfVWL1A3j4w&s"
+            alt="jonathan"
+          />
+          <h3>Jonathan</h3>
+          <p>Empleado</p>
+        </div>
+        <div class="persona">
+          <img
+            src="https://ih1.redbubble.net/image.5062065421.5542/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+            alt="Eiko"
+          />
+          <h3>Eiko</h3>
+          <p>Directora</p>
+        </div>
+        <div class="persona">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUjei7BmmwdqA-C3_nM8CE4S58hlD6rFnmA&s"
+            alt="gustavo"
+          />
+          <h3>Gustavo</h3>
+          <p>Jefe</p>
+        </div>
+      </div>
+    </main>
+    <div id="created-by">
+      <p>Web by:</p>
+      <ul>
+        <li>Gustavo</li>
+        <li>Julio</li>
+        <li>Eiko</li>
+        <li>Jonathan</li>
+      </ul>
+    </div>
+    <footer>
+      <p>© 2026 Panadería El Buen Pancito · Calle avenida de America, Madrid</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".nav-links");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
